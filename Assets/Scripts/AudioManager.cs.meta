@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 266ecf96ed349e1489a676fe74d54727
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - clip_clickRight: {instanceID: 0}
+  - clip_clickWrong: {instanceID: 0}
+  - clip_zoom: {instanceID: 0}
+  - clip_endgame_Claps: {instanceID: 0}
+  - clip_endgame_Confetti: {instanceID: 0}
+  - clip_timer_ticktockNormal: {instanceID: 0}
+  - clip_timer_LoomingBoom: {instanceID: 0}
+  - bgm_music: {fileID: 8300000, guid: 44129aa4a80c1de40ab09776758673a6, type: 3}
+  - A_SFX: {instanceID: 0}
+  - A_Timer: {instanceID: 0}
+  - A_BGM: {instanceID: 0}
+  - A_LoomingBoom: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
