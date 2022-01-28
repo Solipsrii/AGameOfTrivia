@@ -22,7 +22,10 @@ public Animator menuAnimator;
 TODO:: add animations to GAME START. Fade out to black, primarily.
 */
 
-     void Start(){
+     void Start(){ 
+      //ensures that the game can update, after quitting from the game's menu back to the main-menu (in which time = 0).
+      Time.timeScale = 1;
+
        if(!(PlayerPrefs.HasKey("MasterVolume")))
           PlayerPrefs.SetFloat("MasterVolume", 1f);
         audioSlider.value = PlayerPrefs.GetFloat("MasterVolume");
