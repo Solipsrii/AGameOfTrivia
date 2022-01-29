@@ -2,19 +2,22 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - AnimationHelper
-    - AnimationHelper5050
     - AudioManager
-    - CategoriesAnimator
+    - GameEndedLogic
     - GameManager
+    - HandsAnimator
     - MainAnimationHelper
     - MenuManager
     - QuestionFillIn
     - SceneHelper
-    - SceneHelper5050
+    - SceneHelperTwoAnswers
     - TimerScript
     - ZoomOnHover
-    - categoriesHelper
+    - animatorToggle
+    - categoriesHelper_hands
     - introScript
+    - textproFloater
+    - twoAnswersAnimator
     DOTween.dll:
     - DG.Tweening.Core.DOTweenComponent
     - DG.Tweening.Core.DOTweenSettings
@@ -33,6 +36,22 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
+    Unity.Postprocessing.Runtime.dll:
+    - UnityEngine.Rendering.PostProcessing.AmbientOcclusion
+    - UnityEngine.Rendering.PostProcessing.AutoExposure
+    - UnityEngine.Rendering.PostProcessing.Bloom
+    - UnityEngine.Rendering.PostProcessing.ChromaticAberration
+    - UnityEngine.Rendering.PostProcessing.ColorGrading
+    - UnityEngine.Rendering.PostProcessing.DepthOfField
+    - UnityEngine.Rendering.PostProcessing.Grain
+    - UnityEngine.Rendering.PostProcessing.LensDistortion
+    - UnityEngine.Rendering.PostProcessing.MotionBlur
+    - UnityEngine.Rendering.PostProcessing.PostProcessLayer
+    - UnityEngine.Rendering.PostProcessing.PostProcessProfile
+    - UnityEngine.Rendering.PostProcessing.PostProcessResources
+    - UnityEngine.Rendering.PostProcessing.PostProcessVolume
+    - UnityEngine.Rendering.PostProcessing.ScreenSpaceReflections
+    - UnityEngine.Rendering.PostProcessing.Vignette
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -40,11 +59,14 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -52,6 +74,7 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
@@ -61,7 +84,50 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/Categories.unity:
+    Assets/Scenes/Categories_hands.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1520}
+    - Class: 114
+      Script: {instanceID: 1628}
+    - Class: 114
+      Script: {instanceID: 1652}
+    - Class: 114
+      Script: {instanceID: 2612}
+    - Class: 114
+      Script: {instanceID: 2940}
+    - Class: 114
+      Script: {instanceID: 3280}
+    - Class: 114
+      Script: {instanceID: 3962}
+    - Class: 114
+      Script: {instanceID: 4204}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Endgame.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -70,17 +136,9 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
     - Class: 48
-      Script: {instanceID: 0}
-    - Class: 65
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -91,22 +149,28 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1520}
     - Class: 114
+      Script: {instanceID: 1868}
+    - Class: 114
+      Script: {instanceID: 2204}
+    - Class: 114
       Script: {instanceID: 2612}
+    - Class: 114
+      Script: {instanceID: 2808}
     - Class: 114
       Script: {instanceID: 2940}
     - Class: 114
-      Script: {instanceID: 3280}
+      Script: {instanceID: 3178}
     - Class: 114
-      Script: {instanceID: 4038}
+      Script: {instanceID: 5180}
     - Class: 114
-      Script: {instanceID: 4680}
+      Script: {instanceID: 39474}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
-      Script: {instanceID: 0}
-    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -170,7 +234,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3990}
     - Class: 114
-      Script: {instanceID: 5196}
+      Script: {instanceID: 5198}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -241,11 +305,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3688}
     - Class: 114
-      Script: {instanceID: 4202}
+      Script: {instanceID: 4204}
     - Class: 114
-      Script: {instanceID: 4502}
+      Script: {instanceID: 4504}
     - Class: 114
-      Script: {instanceID: 4858}
+      Script: {instanceID: 4860}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -302,7 +366,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3810}
     - Class: 114
-      Script: {instanceID: 4740}
+      Script: {instanceID: 4742}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -359,7 +423,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3810}
     - Class: 114
-      Script: {instanceID: 4740}
+      Script: {instanceID: 4742}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -376,7 +440,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    Assets/Scenes/twoAnswers.unity:
+    Assets/Scenes/twoAnswers_1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -385,42 +449,52 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
     - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 65
+    - Class: 72
+      Script: {instanceID: 0}
+    - Class: 74
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 104
+    - Class: 91
       Script: {instanceID: 0}
-    - Class: 108
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 1520}
     - Class: 114
-      Script: {instanceID: 1638}
-    - Class: 114
       Script: {instanceID: 2204}
+    - Class: 114
+      Script: {instanceID: 2452}
     - Class: 114
       Script: {instanceID: 2612}
     - Class: 114
       Script: {instanceID: 2940}
     - Class: 114
-      Script: {instanceID: 3280}
+      Script: {instanceID: 2970}
     - Class: 114
-      Script: {instanceID: 3432}
+      Script: {instanceID: 3280}
     - Class: 114
       Script: {instanceID: 3650}
     - Class: 114
-      Script: {instanceID: 4202}
+      Script: {instanceID: 4204}
+    - Class: 114
+      Script: {instanceID: 4344}
+    - Class: 114
+      Script: {instanceID: 4634}
+    - Class: 114
+      Script: {instanceID: 4830}
+    - Class: 114
+      Script: {instanceID: 4898}
+    - Class: 114
+      Script: {instanceID: 5170}
+    - Class: 114
+      Script: {instanceID: 5354}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -429,8 +503,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
-    - Class: 212
-      Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
     - Class: 222
@@ -438,8 +510,6 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
-      Script: {instanceID: 0}
-    - Class: 225
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -1202,8 +1272,9 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Game.unity
-  - Assets/Scenes/Categories.unity
-  - Assets/Scenes/twoAnswers.unity
   - Assets/Scenes/fourAnswers.unity
   - Assets/Scenes/threeAnswers.unity
-  playerPath: O:/Apps/Unity/New Trivia/Compiled/Some Trivia Game.exe
+  - Assets/Scenes/twoAnswers_1.unity
+  - Assets/Scenes/Categories_hands.unity
+  - Assets/Scenes/Endgame.unity
+  playerPath: O:/Apps/Compiled/New Trivia/A Simple Trivia Game.exe

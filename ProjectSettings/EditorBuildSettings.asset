@@ -12,15 +12,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Game.unity
     guid: a9998fdee52cc1c46ba16050acf1255b
   - enabled: 1
-    path: Assets/Scenes/Categories.unity
-    guid: 6bf98e5cd2d61f3479617576c539d9e9
-  - enabled: 1
-    path: Assets/Scenes/twoAnswers.unity
-    guid: 9659b5aa3a9e7a847a606c302dd3f510
-  - enabled: 1
     path: Assets/Scenes/fourAnswers.unity
     guid: b54ede47347a7ee46b1f8bb1072a3cc5
   - enabled: 1
     path: Assets/Scenes/threeAnswers.unity
     guid: 85cc46fc78a0cda4fb8bc4b7b60b376f
+  - enabled: 1
+    path: Assets/Scenes/twoAnswers_1.unity
+    guid: a89da6dd828a0b04d9d2e276746b0b69
+  - enabled: 1
+    path: Assets/Scenes/Categories_hands.unity
+    guid: 89f5316eace40834da3289df9778906c
+  - enabled: 1
+    path: Assets/Scenes/Endgame.unity
+    guid: 76b7fa30c1ef83c48957848f906e9314
   m_configObjects: {}
